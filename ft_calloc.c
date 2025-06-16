@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amucahit <amucahit@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 17:37:00 by amucahit          #+#    #+#             */
-/*   Updated: 2025/06/16 17:23:16 by amucahit         ###   ########.fr       */
+/*   Created: 2025/06/16 15:54:11 by amucahit          #+#    #+#             */
+/*   Updated: 2025/06/16 15:54:13 by amucahit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdlib.h>
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t i;
-	char *str;
+	void	*ptr;
 
-	str = (char *)s;
-	i = 0;
-	while (i < n)
-	{
-		str[i] = (unsigned char)c;
-		i++;
-	}
-	return (s);
+	ptr = malloc(count * size);
+	if (!ptr)
+		return (NULL);
+	ft_memset(ptr, 0, count * size);
+	return (ptr);
 }
-int main(void)
-{
-	char str1[20] = "Hello, 42!";
-	char str2[20] = "Hello, 42!";
-	ft_memset(str1, '*', 8);
-
-	printf("ft_memset: %s\n", str1);
- 	return (0);
- }

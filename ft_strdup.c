@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amucahit <amucahit@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 17:37:00 by amucahit          #+#    #+#             */
-/*   Updated: 2025/06/16 17:23:16 by amucahit         ###   ########.fr       */
+/*   Created: 2025/06/16 15:00:49 by amucahit          #+#    #+#             */
+/*   Updated: 2025/06/16 17:01:32 by amucahit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdlib.h>
 
-void *ft_memset(void *s, int c, size_t n)
+char	*ft_strdup(const char *s1)
 {
-	size_t i;
-	char *str;
+	char	*dup;
+	size_t	len;
+	size_t	i;
 
-	str = (char *)s;
+	len = 0;
+	while (s1[len] != '\0')
+		len++;
+	dup = (char *)malloc(sizeof(char) * (len + 1));
+	if (dup == NULL)
+		return (NULL);
 	i = 0;
-	while (i < n)
+	while (i < len)
 	{
-		str[i] = (unsigned char)c;
+		dup[i] = s1[i];
 		i++;
 	}
-	return (s);
+	dup[i] = '\0';
+	return (dup);
 }
-int main(void)
-{
-	char str1[20] = "Hello, 42!";
-	char str2[20] = "Hello, 42!";
-	ft_memset(str1, '*', 8);
-
-	printf("ft_memset: %s\n", str1);
- 	return (0);
- }
