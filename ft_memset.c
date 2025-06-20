@@ -6,27 +6,27 @@
 /*   By: amucahit <amucahit@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:37:00 by amucahit          #+#    #+#             */
-/*   Updated: 2025/06/16 17:23:16 by amucahit         ###   ########.fr       */
+/*   Updated: 2025/06/20 16:33:31 by amucahit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t i;
-	char *str;
+	size_t			i;
+	unsigned char	*str;
 
-	str = (char *)s;
+	str = (unsigned char *)b;
 	i = 0;
-	while (i < n)
+	while (i < len)
 	{
 		str[i] = (unsigned char)c;
 		i++;
 	}
-	return (s);
+	return (b);
 }
-int main(void)
+/*int main(void)
 {
 	char str1[20] = "Hello, 42!";
 	char str2[20] = "Hello, 42!";
@@ -35,3 +35,4 @@ int main(void)
 	printf("ft_memset: %s\n", str1);
  	return (0);
  }
+ */

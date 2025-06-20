@@ -6,18 +6,17 @@
 /*   By: amucahit <amucahit@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:36:52 by amucahit          #+#    #+#             */
-/*   Updated: 2025/06/16 14:40:52 by amucahit         ###   ########.fr       */
+/*   Updated: 2025/06/20 16:04:32 by amucahit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
-int ft_isdigit(int i)
+int	ft_isdigit(int c)
 {
-    if ((i >= 0 && i <= 9))
-        return (1);
-    return(0);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }
 
 // int main()

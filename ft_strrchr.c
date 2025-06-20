@@ -6,11 +6,11 @@
 /*   By: amucahit <amucahit@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 18:17:57 by amucahit          #+#    #+#             */
-/*   Updated: 2025/06/16 18:30:33 by amucahit         ###   ########.fr       */
+/*   Updated: 2025/06/20 16:57:19 by amucahit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -27,4 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-

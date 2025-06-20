@@ -6,29 +6,30 @@
 /*   By: amucahit <amucahit@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:42:55 by amucahit          #+#    #+#             */
-/*   Updated: 2025/06/16 16:00:50 by amucahit         ###   ########.fr       */
+/*   Updated: 2025/06/20 16:27:01 by amucahit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
-void *memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-  char *d = dest;
-  const char *s = src;
-  if(d < s) {
-    while(n--)
-      *d++ = *s++;
-}
-  else {
-     char *sons = s + (n-1);
-     char *sond = d + (n-1);
-     
-	 while(n--)
-       *lastd-- = *lasts--;
-}
-  
-  return dest;
-}
+	unsigned char	*d;
+	unsigned char	*s;
 
+	if (!dest && !src)
+		return (NULL);
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if (d > s)
+	{
+		while (n--)
+			d[n] = s[n];
+	}
+	else
+	{
+		while (n--)
+			*d++ = *s++;
+	}
+	return (dest);
+}
