@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  run_francinette_and_norminette:
+  run_francinette:
     name: Run Francinette
     runs-on: ubuntu-latest
 
