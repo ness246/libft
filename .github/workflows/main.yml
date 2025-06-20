@@ -1,13 +1,13 @@
 # .github/workflows/workflow.yml
 
-name: Francinette + Norminette Tests
+name: Francinette
 
 on:
   workflow_dispatch:
 
 jobs:
   run_francinette_and_norminette:
-    name: Run Francinette & Norminette
+    name: Run Francinette
     runs-on: ubuntu-latest
 
     env:
